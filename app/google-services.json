@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "781496205660",
+    "firebase_url": "https://familiahoyseviaja.firebaseio.com",
+    "project_id": "familiahoyseviaja",
+    "storage_bucket": "familiahoyseviaja.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:781496205660:android:1fc9c99288505ac909c199",
+        "android_client_info": {
+          "package_name": "com.unilibre.familiaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "781496205660-r18ibghci6s8v53p9pf0b11u3fd78bl1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3lmFZlnJcKLcluYIwvIA2m2WXO7YkFeY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "781496205660-r18ibghci6s8v53p9pf0b11u3fd78bl1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
