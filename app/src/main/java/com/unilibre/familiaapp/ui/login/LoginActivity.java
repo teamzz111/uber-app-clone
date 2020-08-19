@@ -68,7 +68,7 @@ public class LoginActivity extends AppCompatActivity {
                 if (loginResult == null) {
                     return;
                 }
-                loadingProgressBar.setVisibility(View.GONE);
+                loadingProgressBar.setVisibility(View.VISIBLE);
                 if (loginResult.getError() != null) {
                     showLoginFailed("Autenticación fallida");
                 } else {
@@ -77,6 +77,8 @@ public class LoginActivity extends AppCompatActivity {
                 }
 
                 setResult(Activity.RESULT_OK);
+                loadingProgressBar.setVisibility(View.GONE);
+
 
                 //Complete and destroy login activity once successful
             }
