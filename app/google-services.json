@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "781496205660-8mdgq58ik4aee0hv4i639g8b606ldtik.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.unilibre.familiaapp",
+            "certificate_hash": "05d4320dc802df9afd2a01566d1067ef6bd88535"
+          }
+        },
+        {
           "client_id": "781496205660-r18ibghci6s8v53p9pf0b11u3fd78bl1.apps.googleusercontent.com",
           "client_type": 3
         }
