@@ -1,6 +1,7 @@
 package com.unilibre.familiaapp.ui.login;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -24,7 +25,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
+import com.unilibre.familiaapp.HomeActivity;
 import com.unilibre.familiaapp.R;
 
 public class LoginActivity extends AppCompatActivity {
@@ -133,7 +134,7 @@ public class LoginActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             showLoginFailed("Autenticación exitosa");
 
-                            FirebaseUser user = mAuth.getCurrentUser();
+                            startActivity(new Intent(LoginActivity.this, HomeActivity.class));
                         } else {
                             Log.w("LOG", "signInWithEmail:failure", task.getException());
                             showLoginFailed("Autenticación fallida");
