@@ -34,14 +34,13 @@ public class GalleryFragment extends Fragment {
 
         check.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                addListenerOnButton();
-                Snackbar.make(root, "Uno: " + chebkbox1.isChecked() + " Dos: "+ chebkbox2.isChecked() + " S: "+ spinner.getSelectedItem().toString()+ "SEEK: " + seek.getProgress(), Snackbar.LENGTH_LONG)
+                Snackbar.make(root, "Uno: " + chebkbox1.isChecked() + " Dos: "+ chebkbox2.isChecked() + " S: "+ spinner.getSelectedItem().toString()+ " Maíz "+ addListenerOnButton()+" SEEK: " + seek.getProgress(), Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
         return root;
     }
-    public void addListenerOnButton() {
+    public String addListenerOnButton() {
         RadioGroup radioGroup = root.findViewById(R.id.radiogroup);
         // get selected radio button from radioGroup
         int selectedId = radioGroup.getCheckedRadioButtonId();
@@ -49,7 +48,7 @@ public class GalleryFragment extends Fragment {
         // find the radiobutton by returned id
         RadioButton radioButton = root.findViewById(selectedId);
 
-        Toast.makeText(getActivity(), radioButton.getText(), Toast.LENGTH_SHORT).show();
+        return radioButton.getText().toString();
 
     }
 }
