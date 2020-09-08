@@ -27,7 +27,7 @@ public class ToolsFragment extends Fragment {
         VideoView videoView =(VideoView)root.findViewById(R.id.videoView);
         MediaController mediaController= new MediaController(getActivity());
         mediaController.setAnchorView(videoView);
-        Uri uri=Uri.parse("https://vod-progressive.akamaized.net/exp=1599562955~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F3266%2F16%2F416330724%2F1793467576.mp4~hmac=c21e0b241357458538f1b4d5ca400448440be236cfe3582fd874fecd5af1a695/vimeo-prod-skyfire-std-us/01/3266/16/416330724/1793467576.mp4?filename=Woman+-+38084.mp4");
+        Uri uri=Uri.parse("https://vod-progressive.akamaized.net/exp=1599618060~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F1540%2F16%2F407701799%2F1746637010.mp4~hmac=37c5dabdfb2b203a9ffd2c9388e74d5738c8df408d689de292752fcd8767b5fb/vimeo-prod-skyfire-std-us/01/1540/16/407701799/1746637010.mp4?filename=Cat+-+35733.mp4");
         videoView.setMediaController(mediaController);
         videoView.setVideoURI(uri);
         videoView.requestFocus();
