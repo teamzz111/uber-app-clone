@@ -11,4 +11,33 @@
     <string name="login_failed">"Login failed"</string>
     <string name="title_activity_maps">Mapa</string>
     <string name="hello">¡Bienvenido!</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Andrés Largo</string>
+    <string name="nav_header_subtitle">contacto@andreslargo.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="label_1">Uno</string>
+    <string name="label_2">Dos</string>
+    <string name="label_3">Tres</string>
+    <string name="label_4">Cuatro</string>
+    <string name="label_5">Cinco</string>
+
+    <string-array name="animals">
+        <item>Perro</item>
+        <item>Gato</item>
+        <item>Caballo</item>
+        <item>Canario</item>
+        <item>Vaca</item>
+        <item>Cerdo</item>
+    </string-array>
+
 </resources>
