@@ -42,16 +42,14 @@ public class GalleryFragment extends Fragment {
         return root;
     }
     public void addListenerOnButton() {
-        RadioGroup radioGroup = root.findViewById(R.id.radio);
+        RadioGroup radioGroup = root.findViewById(R.id.radiogroup);
+        // get selected radio button from radioGroup
+        int selectedId = radioGroup.getCheckedRadioButtonId();
 
+        // find the radiobutton by returned id
+        RadioButton radioButton = root.findViewById(selectedId);
 
-                // get selected radio button from radioGroup
-                int selectedId = radioGroup.getCheckedRadioButtonId();
-
-                // find the radiobutton by returned id
-                RadioButton radioButton = root.findViewById(selectedId);
-
-                Toast.makeText(getActivity(), radioButton.getText(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(), radioButton.getText(), Toast.LENGTH_SHORT).show();
 
     }
 }
