@@ -25,4 +25,19 @@
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
+    <string name="label_1">Uno</string>
+    <string name="label_2">Dos</string>
+    <string name="label_3">Tres</string>
+    <string name="label_4">Cuatro</string>
+    <string name="label_5">Cinco</string>
+
+    <string-array name="animals">
+        <item>Perro</item>
+        <item>Gato</item>
+        <item>Caballo</item>
+        <item>Canario</item>
+        <item>Vaca</item>
+        <item>Cerdo</item>
+    </string-array>
+
 </resources>
