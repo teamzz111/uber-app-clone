@@ -27,6 +27,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.unilibre.familiaapp.HomeActivity;
 import com.unilibre.familiaapp.R;
+import com.unilibre.familiaapp.ui.register.RegisterActivity;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -45,8 +46,14 @@ public class LoginActivity extends AppCompatActivity {
         final EditText passwordEditText = findViewById(R.id.password);
         final Button loginButton = findViewById(R.id.login);
         final ProgressBar loadingProgressBar = findViewById(R.id.loading);
+        final Button registerButton = findViewById(R.id.register);
 
-
+        registerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
+            }
+        });
         loginViewModel.getLoginFormState().observe(this, new Observer<LoginFormState>() {
             @Override
             public void onChanged(@Nullable LoginFormState loginFormState) {
