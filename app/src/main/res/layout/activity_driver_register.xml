@@ -57,6 +57,16 @@
                 android:inputType="number" />
 
             <EditText
+                android:id="@+id/bank"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginEnd="60dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Numero cuenta bancaria" />
+
+            <EditText
                 android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
