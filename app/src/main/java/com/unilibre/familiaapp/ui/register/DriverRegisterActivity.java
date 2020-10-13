@@ -1,5 +1,6 @@
 package com.unilibre.familiaapp.ui.register;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -9,13 +10,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 import com.unilibre.familiaapp.R;
 
 public class DriverRegisterActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private StorageReference mStorageRef;
+    private StorageReference StorageRef;
     private Button property_card, soat, mechanical_inspection;
     private Uri property_card_path, soat_path, mechanical_inspection_path;
 
@@ -23,7 +27,7 @@ public class DriverRegisterActivity extends AppCompatActivity implements View.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_driver_register);
-        mStorageRef = FirebaseStorage.getInstance().getReference();
+        StorageRef = FirebaseStorage.getInstance().getReference();
 
         property_card = (Button) findViewById(R.id.propertycard);
         soat = (Button)findViewById(R.id.soat);
@@ -58,6 +62,29 @@ public class DriverRegisterActivity extends AppCompatActivity implements View.On
         }
     }
 
+    private void uploadFile(Uri file){
+        if(file != null) {
+            //Uri file = Uri.fromFile(new File("path/to/images/rivers.jpg"));
+            StorageReference riversRef = StorageRef.child("images/rivers.jpg");
+
+            riversRef.putFile(file)
+                    .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                            // Get a URL to the uploaded content
+                            // Uri downloadUrl = taskSnapshot.getDownloadUrl();
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception exception) {
+                            // Handle unsuccessful uploads
+                            // ...
+                        }
+                    });
+        }
+    }
+
     @Override
     public void onClick(View view) {
         if(view == property_card){
@@ -65,12 +92,12 @@ public class DriverRegisterActivity extends AppCompatActivity implements View.On
             FileChooser(234);
             //Toast.makeText(DriverRegisterActivity.this, "Property Card", Toast.LENGTH_SHORT).show();
         }
-        else if(view==soat){
+        else if(view == soat){
             // Do smt
             FileChooser(537);
             //Toast.makeText(DriverRegisterActivity.this, "SOAT", Toast.LENGTH_SHORT).show();
         }
-        else if (view==mechanical_inspection){
+        else if (view == mechanical_inspection){
             // Do smt
             FileChooser(451);
             //Toast.makeText(DriverRegisterActivity.this, "Mechanical Inspection", Toast.LENGTH_SHORT).show();
