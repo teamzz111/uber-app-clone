@@ -23,7 +23,7 @@ import com.unilibre.familiaapp.ui.login.LoginActivity;
 
 public class RegisterActivity extends AppCompatActivity {
     EditText mname, memail, mpassword;
-    Button mRegisterBtn;
+    Button mRegisterBtn, BeDriverBtn;
     FirebaseAuth fAuth;
 
     @Override
@@ -35,6 +35,7 @@ public class RegisterActivity extends AppCompatActivity {
         memail = findViewById(R.id.email);
         mpassword = findViewById(R.id.password);
         mRegisterBtn = findViewById(R.id.register);
+        BeDriverBtn = findViewById(R.id.driver);
 
         fAuth= FirebaseAuth.getInstance();
 
@@ -78,6 +79,13 @@ public class RegisterActivity extends AppCompatActivity {
                 });
             }
 
+        });
+
+        BeDriverBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(RegisterActivity.this, DriverRegisterActivity.class));
+            }
         });
     }
 }
