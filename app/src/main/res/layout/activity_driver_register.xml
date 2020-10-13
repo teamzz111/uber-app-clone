@@ -137,7 +137,7 @@
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/propertycard"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginStart="60dp"
@@ -145,7 +145,7 @@
                 android:text="Tarjeta de propiedad" />
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/soat"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginStart="60dp"
@@ -153,7 +153,7 @@
                 android:text="SOAT" />
 
             <Button
-                android:id="@+id/button4"
+                android:id="@+id/mechanical"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginStart="60dp"
