@@ -5,124 +5,25 @@
     android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <CheckBox
-        android:id="@+id/check1"
+    <com.braintreepayments.cardform.view.CardForm
+        android:id="@+id/card_form"
         android:layout_width="match_parent"
-        android:layout_height="339dp"
-        android:layout_marginBottom="-291dp"
-        android:checked="true"
-        android:text="@string/label_1"
-        app:layout_constraintBottom_toBottomOf="@+id/button"
-        app:layout_constraintStart_toStartOf="parent" /><![CDATA[
-
-
-
-
-
-    />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    ]]>
-
-    <CheckBox
-        android:id="@+id/check2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="256dp"
-        android:text="@string/label_2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Spinner
-        android:id="@+id/planets_spinner"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="-48dp"
-        android:entries="@array/animals"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
-
+        android:layout_height="match_parent" />
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:id="@+id/login"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="VALIDA"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/check2" />
-
-    <SeekBar
-        android:id="@+id/seekBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <RadioGroup
-        android:id="@+id/radiogroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="98dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="313dp"
+        android:layout_gravity="start"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="64dp"
+        android:background="@drawable/button_rounded"
+        android:text="Pagar"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/planets_spinner">
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Maíz" />
-
-        <RadioButton
-            android:id="@+id/rb1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Frito" />
-
-        <RadioButton
-            android:id="@+id/rb3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Tierno" />
-
-        <RadioButton
-            android:id="@+id/rb2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Inflado" />
-    </RadioGroup>
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintVertical_bias="0.2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
