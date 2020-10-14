@@ -84,8 +84,18 @@
         app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password"
-        app:layout_constraintVertical_bias="0.157"
-        />
+        app:layout_constraintVertical_bias="0.157" />
+
+    <Button
+        android:id="@+id/driver"
+        android:layout_width="174dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="92dp"
+        android:background="#00FFFFFF"
+        android:text="Quiero ser conductor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/register" />
 
     <ProgressBar
         android:id="@+id/loading"
