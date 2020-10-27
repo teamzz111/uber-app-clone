@@ -18,6 +18,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.biometric.BiometricPrompt;
+import androidx.core.content.ContextCompat;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
@@ -25,12 +27,10 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.unilibre.familiaapp.HomeActivity;
 import com.unilibre.familiaapp.R;
 import com.unilibre.familiaapp.ui.register.RegisterActivity;
-
-import androidx.biometric.BiometricPrompt;
-import androidx.core.content.ContextCompat;
 
 import java.util.concurrent.Executor;
 
@@ -143,21 +143,21 @@ public class LoginActivity extends AppCompatActivity {
         executor = ContextCompat.getMainExecutor(this);
         biometricPrompt = new BiometricPrompt(LoginActivity.this,
                 executor, new BiometricPrompt.AuthenticationCallback() {
-            @Override
             public void onAuthenticationError(int errorCode,
                                               @NonNull CharSequence errString) {
                 super.onAuthenticationError(errorCode, errString);
             }
 
-            @Override
             public void onAuthenticationSucceeded(
                     @NonNull BiometricPrompt.AuthenticationResult result) {
                 super.onAuthenticationSucceeded(result);
                 showLoginFailed("Autenticación exitosa");
+                loginAnos();
                 startActivity(new Intent(LoginActivity.this, HomeActivity.class));
             }
 
-            @Override
+
+
             public void onAuthenticationFailed() {
                 super.onAuthenticationFailed();
                 showLoginFailed("Autenticación fallida");
@@ -176,6 +176,28 @@ public class LoginActivity extends AppCompatActivity {
         biometricLoginButton.setOnClickListener(view -> {
             biometricPrompt.authenticate(promptInfo);
         });
+    }
+
+    private void loginAnos(){
+        mAuth.signInAnonymously()
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            // Sign in success, update UI with the signed-in user's information
+                            Log.d("Auth", "signInAnonymously:success");
+                            FirebaseUser user = mAuth.getCurrentUser();
+                            Log.d("Auth", user + "");
+
+                        } else {
+                            // If sign in fails, display a message to the user.
+                            Log.w("Auth", "signInAnonymously:failure", task.getException());
+                            showLoginFailed("Autenticación fallida");
+                        }
+
+                        // ...
+                    }
+                });
     }
 
     private void loginUser(String user, String password){

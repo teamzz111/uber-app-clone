@@ -20,6 +20,13 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_fingerprint">Logueo con un toque</string>
+    <string name="desc_fingerprint">Coloque la yema del dedo en el escáner para verificar su identidad</string>
+    <string name="note">(El inicio de sesión con la huella dactilar hace que la aplicación inicie sesión mucho más rápido. Su dispositivo debe tener al menos una huella digital registrada en la configuración del dispositivo)</string>
+    <string name="activity_home_desc">Ha iniciado sesión con éxito con la autenticación de huellas dactilares</string>
+    <string name="activity_home_note">Cierre y vuelva a abrir la aplicación para volver a ver la pantalla de autenticación de huellas dactilares</string>
+
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Zona de pagos</string>
     <string name="menu_slideshow">Slideshow</string>

@@ -2,6 +2,7 @@ package com.unilibre.familiaapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,6 +22,7 @@ public class AuthActivity extends AppCompatActivity {
 
     protected void onStart(){
         super.onStart();
+        Log.d("Auth", fAuth.getCurrentUser() + "");
         if(fAuth.getCurrentUser() != null){
             startActivity(new Intent(AuthActivity.this, HomeActivity.class));
         } else {
