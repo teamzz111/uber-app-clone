@@ -1,12 +1,136 @@
 <resources>
-    <string name="app_name">Familia App</string>
+    <string name="app_name">FamiliaApp</string>
     <!-- Strings related to login -->
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
+    <string name="prompt_email">Correo electrónico</string>
+    <string name="prompt_user">Nombre de usuario</string>
+    <string name="prompt_password">Contraseña</string>
+    <string name="action_sign_in">Iniciar sesión</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="welcome">"Welcome !"</string>
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="title_activity_maps">Mapa</string>
+    <string name="hello">¡Bienvenido!</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Andrés Largo</string>
+    <string name="nav_header_subtitle">contacto@andreslargo.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_fingerprint">Logueo con un toque</string>
+    <string name="desc_fingerprint">Coloque la yema del dedo en el escáner para verificar su identidad</string>
+    <string name="note">(El inicio de sesión con la huella dactilar hace que la aplicación inicie sesión mucho más rápido. Su dispositivo debe tener al menos una huella digital registrada en la configuración del dispositivo)</string>
+    <string name="activity_home_desc">Ha iniciado sesión con éxito con la autenticación de huellas dactilares</string>
+    <string name="activity_home_note">Cierre y vuelva a abrir la aplicación para volver a ver la pantalla de autenticación de huellas dactilares</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Zona de pagos</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="label_1">Uno</string>
+    <string name="label_2">Dos</string>
+    <string name="label_3">Tres</string>
+    <string name="label_4">Cuatro</string>
+    <string name="label_5">Cinco</string>
+
+    <string-array name="animals">
+        <item>Perro</item>
+        <item>Gato</item>
+        <item>Caballo</item>
+        <item>Canario</item>
+        <item>Vaca</item>
+        <item>Cerdo</item>
+    </string-array>
+    
+    <string-array name="carbrands">
+        <item>Seleccione uno</item>
+        <item>Alfa Romeo</item>
+        <item>Asia</item>
+        <item>Aston Martin</item>
+        <item>Audi</item>
+        <item>BMW</item>
+        <item>BYD</item>
+        <item>Baic</item>
+        <item>Bentley</item>
+        <item>Brilliance</item>
+        <item>Buick</item>
+        <item>Cadillac</item>
+        <item>Chana</item>
+        <item>Changan</item>
+        <item>Chery</item>
+        <item>Chevrolet</item>
+        <item>Chrysler</item>
+        <item>Citroën</item>
+        <item>DFM</item>
+        <item>DFSK</item>
+        <item>DS</item>
+        <item>Dacia</item>
+        <item>Daewoo</item>
+        <item>Daihatsu</item>
+        <item>Dodge</item>
+        <item>Faw</item>
+        <item>Fiat</item>
+        <item>Ford</item>
+        <item>Foton</item>
+        <item>GMC</item>
+        <item>Geely</item>
+        <item>Gonow</item>
+        <item>Great Wall</item>
+        <item>Hafei</item>
+        <item>Hino</item>
+        <item>Honda</item>
+        <item>Hummer</item>
+        <item>Hyundai</item>
+        <item>Infiniti</item>
+        <item>International</item>
+        <item>Isuzu</item>
+        <item>Iveco</item>
+        <item>JAC</item>
+        <item>JMC</item>
+        <item>Jaguar</item>
+        <item>Jeep</item>
+        <item>Kenworth</item>
+        <item>Kia</item>
+        <item>Lada</item>
+        <item>Lancia</item>
+        <item>Land Rover</item>
+        <item>Landwind</item>
+        <item>Lexus</item>
+        <item>Lifan</item>
+        <item>MG</item>
+        <item>Mahindra</item>
+        <item>Maserati</item>
+        <item>Mazda</item>
+        <item>Mercedes-Benz</item>
+        <item>Mini</item>
+        <item>Mitsubishi</item>
+        <item>Nissan</item>
+        <item>Oldsmobile</item>
+        <item>Peugeot</item>
+        <item>Piaggio</item>
+        <item>Pontiac</item>
+        <item>Porsche</item>
+        <item>RAM</item>
+        <item>Range Rover</item>
+        <item>Renault</item>
+        <item>Rolls-Royce</item>
+        <item>Rover</item>
+        <item>SEAT</item>
+        <item>Skoda</item>
+        <item>Ssangyong</item>
+        <item>Subaru</item>
+        <item>Suzuki</item>
+        <item>Tesla</item>
+        <item>Toyota</item>
+        <item>Volkswagen</item>
+        <item>Volvo</item>
+        <item>Zotye</item>
+    </string-array>
+
 </resources>
