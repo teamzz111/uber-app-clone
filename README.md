@@ -20,7 +20,8 @@ Java · Android SDK (minSdk 21, targetSdk 29) · Firebase (Auth, Firestore, Stor
 
 1. Open the project in Android Studio.
 2. Use your own Firebase project: download its `google-services.json` into `app/`, and enable Email/Password auth, Firestore and Storage.
-3. Add your own Google Maps API key in `app/src/debug/res/values/google_maps_api.xml` (and the release equivalent).
+   The repository does not ship a Firebase config: you must supply your own `app/google-services.json` (it is git-ignored and must never be committed).
+3. Add your own Google Maps API key in `app/src/debug/res/values/google_maps_api.xml` (and the release equivalent), replacing the `YOUR_GOOGLE_MAPS_API_KEY` placeholder.
 4. Build and run on a device or emulator with Google Play Services.
 
 Active development happened on the `develop` branch.
